@@ -78,14 +78,27 @@
   
 <!-- Product Image Showcase -->
 <section class="flex justify-center">
-  <div class="relative w-full max-w-4xl overflow-hidden rounded-2xl border border-primary/30 bg-white dark:bg-card-dark shadow-lg">
+  <div class="group relative w-full max-w-4xl overflow-hidden rounded-2xl
+              border border-primary/30 bg-white dark:bg-card-dark
+              shadow-lg transition-all duration-500 ease-out
+              hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/30">
+
     <img 
       src="image/produk.jpeg" 
       alt="Banana Chips produk"
-      class="w-full h-[280px] object-cover object-center"
+      class="w-full h-[280px] object-cover object-center
+             transition-transform duration-700 ease-out
+             group-hover:scale-110"
     />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-    <div class="absolute bottom-6 left-6">
+
+    <div class="absolute inset-0 bg-gradient-to-t
+                from-black/60 via-black/20 to-transparent
+                transition-opacity duration-500
+                group-hover:opacity-80"></div>
+
+    <div class="absolute bottom-6 left-6
+                transition-transform duration-500
+                group-hover:translate-y-[-6px]">
       <p class="text-primary text-xs font-bold tracking-widest uppercase">
         Product
       </p>
@@ -93,49 +106,68 @@
         Variant Banana Chips
       </h3>
     </div>
+
   </div>
 </section>
 
 <!-- KATEGORI PRODUK -->
 <section class="space-y-6">
-  <h2 class="text-2xl font-bold tracking-tight border-l-4 border-primary pl-4">
-    Product Category: Banana Chips Variants
+  <h2 class="text-2xl font-bold tracking-tight text-center">
+    <span class="inline-block border-b-4 border-primary pb-2">
+      Product Category: Banana Chips Variants
+    </span>
   </h2>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
     <!-- Product Left -->
-    <div class="group flex flex-col gap-4 p-6 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark
-            transition-all duration-300 ease-out
-            hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20">
+    <div class="group flex flex-col gap-4 p-6 rounded-xl bg-white dark:bg-card-dark
+                border border-slate-200 dark:border-border-dark
+                transition-all duration-300 ease-out
+                hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20">
 
       <div
-        class="h-full w-full rounded-lg bg-cover bg-center"
-        data-alt="Banana chips chocolate variant"
+        class="h-80 w-full rounded-lg bg-cover bg-center
+               transition-transform duration-500 ease-out
+               group-hover:scale-105"
+        data-alt="Banana chips bowl variant"
         style="background-image: url(image/kategori1.jpg);">
-        
       </div>
-      <h3 class="text-xl font-bold text-primary">Variant Bowl</h3>
+
+      <h3 class="text-xl font-bold text-primary transition-transform duration-300 group-hover:translate-x-1">
+        Variant Bowl
+      </h3>
+
+      <ul class="text-sm text-slate-500 dark:text-slate-400">
+        <li>Price: Rp10.000</li>
+      </ul>
     </div>
 
     <!-- Product Right -->
-    <div class="flex flex-col gap-4 p-6 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark">
+    <div class="group flex flex-col gap-4 p-6 rounded-xl bg-white dark:bg-card-dark
+                border border-slate-200 dark:border-border-dark
+                transition-all duration-300 ease-out
+                hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20">
+
       <div
-        class="h-80 w-full rounded-lg bg-cover bg-center"
-        data-alt="Banana chips matcha variant"
+        class="h-80 w-full rounded-lg bg-cover bg-center
+               transition-transform duration-500 ease-out
+               group-hover:scale-105"
+        data-alt="Banana chips standing pouch variant"
         style="background-image: url(image/before.jpeg);">
-        
       </div>
-      <h3 class="text-xl font-bold text-primary">Variant Standing Pouch</h3>
+
+      <h3 class="text-xl font-bold text-primary transition-transform duration-300 group-hover:translate-x-1">
+        Variant Standing Pouch
+      </h3>
+
+      <ul class="text-sm text-slate-500 dark:text-slate-400">
+        <li>Price: Rp5.000</li>
+      </ul>
     </div>
 
   </div>
-
-  
-
 </section>
-
-<!-- kategori produk end -->
 
 <!-- Key Metrics Section -->
 <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
