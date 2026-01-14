@@ -75,11 +75,7 @@
        style="background-image: url(image/logo.jpeg);">
   </div>
 </section>
-<<<<<<< HEAD
   
-=======
-
->>>>>>> 1e1acd2c1a7e4322614e45c7ec55bda8bdcac843
 <!-- Product Image Showcase -->
 <section class="flex justify-center">
   <div class="relative w-full max-w-4xl overflow-hidden rounded-2xl border border-primary/30 bg-white dark:bg-card-dark shadow-lg">
@@ -174,32 +170,79 @@
 <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 <!-- Line Chart: Daily Sales -->
 <div class="lg:col-span-2 p-8 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark flex flex-col gap-6">
-<div class="flex justify-between items-center">
-<div>
-<h3 class="text-lg font-bold">Daily Sales Trend</h3>
-<p class="text-slate-400 text-xs">November 1 - November 22, 2025</p>
+
+  <!-- HEADER -->
+  <div class="flex justify-between items-center">
+    <div>
+      <h3 class="text-lg font-bold">Daily Sales Trend</h3>
+      <p class="text-slate-400 text-xs">November 1 – November 22, 2025</p>
+    </div>
+
+    <div class="flex gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#f9eb24]"></span>
+        <span class="text-xs text-slate-400 uppercase font-bold tracking-tighter">
+          Gross Sales
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHART CONTAINER -->
+  <div class="relative flex-1 min-h-[300px] pb-8">
+
+    <!-- BACKGROUND ICON -->
+    <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+      <span class="material-symbols-outlined scale-[10]">query_stats</span>
+    </div>
+
+    <!-- SVG GRAPH (REAL DATA) -->
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 300" preserveAspectRatio="none">
+      <path
+        d="
+          M0,215
+          L38,200
+          L76,94
+          L114,109
+          L152,226
+          L190,270
+          L228,153
+          L266,245
+          L304,153
+          L342,153
+          L380,256
+          L418,270
+          L456,226
+          L494,50
+          L532,183
+          L570,79
+          L608,256
+          L646,153
+          L684,226
+          L722,226
+          L760,245
+          L798,153
+        "
+        fill="none"
+        stroke="#f9eb24"
+        stroke-width="4"
+        class="drop-shadow-[0_0_10px_#f9eb24]"
+      />
+    </svg>
+
+    <!-- X AXIS LABELS -->
+    <div class="absolute bottom-0 w-full flex justify-between text-[10px] text-slate-500 font-bold px-2">
+      <span>NOV 01</span>
+      <span>NOV 05</span>
+      <span>NOV 10</span>
+      <span>NOV 15</span>
+      <span>NOV 20</span>
+      <span>NOV 22</span>
+    </div>
+
+  </div>
 </div>
-<div class="flex gap-4">
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#f9eb24]"></span>
-<span class="text-xs text-slate-400 uppercase font-bold tracking-tighter">Gross Sales</span>
-</div>
-</div>
-</div>
-<div class="flex-1 min-h-[300px] flex items-end justify-between gap-1 pb-4 relative">
-<!-- Placeholder for Chart Graphics -->
-<div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
-<span class="material-symbols-outlined scale-[10]">query_stats</span>
-</div>
-<!-- Custom SVG Line mimicking a trend -->
-<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none">
-<path class="drop-shadow-[0_0_10px_#f9eb24]" d="M0,250 Q100,200 200,230 T400,100 T600,150 T800,50" fill="none" stroke="#f9eb24" stroke-width="4"></path>
-</svg>
-<!-- X-Axis Labels -->
-<div class="absolute bottom-0 w-full flex justify-between text-[10px] text-slate-500 font-bold px-2">
-<span>NOV 16</span><span>NOV 05</span><span>NOV 10</span><span>NOV 15</span><span>NOV 20</span><span>NOV 22</span>
-</div>
-</div>
+
 </div>
 <!-- Product Performance -->
 <div class="p-8 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark flex flex-col gap-6">
