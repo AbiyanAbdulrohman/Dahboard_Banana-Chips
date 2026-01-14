@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Banana Chips Business Report Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9eb24",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0a0a0a",
+                        "card-dark": "#1a1a16",
+                        "border-dark": "#3a3827",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .luxury-gradient {
+            background: linear-gradient(180deg, rgba(249, 235, 36, 0.1) 0%, rgba(10, 10, 10, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-border-dark px-10 py-3 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-black leading-tight tracking-widest text-primary">BANANA CHIPS</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Executive Summary</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-primary" href="#">Performance</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Inventory</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Growth Strategy</a>
+</nav>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold transition-transform active:scale-95">
+<span class="material-symbols-outlined mr-2 text-lg">download</span>
+<span>Export Report</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="Corporate profile picture of the analyst" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGFhBNB_VZFsdgMTh1cIXb0sszdjYjff3bSTccRBU61AM90GAxvh3lVNQqL7GFLKGKuWbCYcBvzGhCsZX-BUBCbYUzb7M30iD8-ZPDy_6tRNlnanqw5UOaKHUpWFnP5d_4qDJaCYuKS1fSiT5aeAG6_bD7BnMTIQgmKwbnJadGJwabYE_NKRGnYNS2JClKi9sP2fFvB_YQcYXPDvuW3sD4vtUEG1OEuetMFAobzFK4BeZ9fnafsVikTiuktqj3n81AhjAf7Oe5gio");'></div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 py-10 space-y-10">
+<!-- Page Heading -->
+<section class="flex flex-col gap-2 luxury-gradient p-6 rounded-xl border border-primary/20">
+<h1 class="text-4xl lg:text-5xl font-black leading-tight tracking-tighter uppercase dark:text-white">
+                BANANA CHIPS BUSINESS REPORT
+            </h1>
+<p class="text-slate-500 dark:text-primary/70 text-lg font-medium">Sales Performance &amp; Profitability – November 2025</p>
+</section>
+<!-- Key Metrics Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-2 rounded-xl p-8 bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Total Revenue</p>
+<span class="material-symbols-outlined text-primary">payments</span>
+</div>
+<p class="dark:text-white tracking-tight text-4xl font-bold leading-tight">Rp880.000</p>
+<div class="flex items-center gap-1 text-emerald-500 text-sm font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12.5% vs Last Month</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-8 bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Total Profit</p>
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<p class="dark:text-white tracking-tight text-4xl font-bold leading-tight">Rp349.400</p>
+<div class="flex items-center gap-1 text-emerald-500 text-sm font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+8.2% Growth</span>
+</div>
+</div>
+<div class="flex items-center gap-6 rounded-xl p-8 bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark shadow-sm">
+<div class="relative flex items-center justify-center">
+<svg class="size-24 transform -rotate-90">
+<circle class="text-slate-200 dark:text-border-dark" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="150.7" stroke-width="8"></circle>
+</svg>
+<span class="absolute text-xl font-bold">40%</span>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Profit Margin</p>
+<p class="text-2xl font-bold text-white">Target Reached</p>
+<div class="flex items-center gap-1 text-emerald-500 text-sm font-bold">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span>On Track</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Before/After Section -->
+<section class="space-y-6">
+<h2 class="text-2xl font-bold tracking-tight border-l-4 border-primary pl-4">Operational Evolution: Transformation Analysis</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Before -->
+<div class="flex flex-col gap-4 p-6 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark">
+<div class="h-48 w-full rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center grayscale opacity-60" data-alt="Image showing messy initial production setup" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiEhksgCO8UqfEm6ZzesRy95anAPp-yxP-Di3AbCSxlOaYWREb4bTqEo-djNWRaZcTuraqhKvlxRL0wXjAIvdU6quDVkPfb6Sv19TBc06ziG9el9hO2tkGEx5BhSlr1DR7CGU9ycpv37NcpoHfQmpNzzBpNfnSSSBPdZ_mgsmGWQXWZGByYn910Y51fJkjdLVsdQ6AkrphAq1wFyl-cEspIgrYCxEr4C7201Xc7hOkrHmOiueHpI4FBvXpTT-1v00hDRg7w8trNB8');"></div>
+<h3 class="text-xl font-bold text-slate-400">Kondisi Sebelum Evaluasi</h3>
+<ul class="space-y-3 text-slate-500 dark:text-slate-400 text-sm">
+<li class="flex gap-2"><span class="material-symbols-outlined text-red-400 text-sm mt-1">close</span> Pencatatan manual menggunakan buku fisik, rentan hilang dan sulit dianalisis.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-red-400 text-sm mt-1">close</span> Kemasan produk sederhana tanpa branding yang jelas.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-red-400 text-sm mt-1">close</span> Stok bahan baku sering tidak terkontrol menyebabkan over-stock.</li>
+</ul>
+</div>
+<!-- After -->
+<div class="flex flex-col gap-4 p-6 rounded-xl bg-white dark:bg-card-dark border-2 border-primary/30 relative">
+<div class="absolute -top-3 -right-3 bg-primary text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Improved</div>
+<div class="h-48 w-full rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center" data-alt="Image showing modern branded packaging and clean workspace" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAT-btuLp2WmsAW9jPDmtNsqEjEVHPLesVrdvQhljtWdZBTDMg_EgZCtLzKsduY0ze6K4RsvIn-EfgYdZ0cabvusx4SBu--uNOZ6aTh7Z_wS00NdIqOLXrT4EBb3G1uznBQrxemOXnl9Df60piLb5r1SzfE2xJw4aTw-XUUUpaOJNZCIi6WG7oLLTCGJKzl_eaFDTItZS_s9RPoLfFuivNG38sZ85sCIaERgK9J-RAvUE-WZw3x3-d_a0RCj6QG39iMhTHZOifLIUE');"></div>
+<h3 class="text-xl font-bold text-primary">Kondisi Setelah Evaluasi</h3>
+<ul class="space-y-3 text-slate-300 text-sm">
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span> Digital dashboard tracking harian untuk akurasi data finansial 100%.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span> Re-branding kemasan premium dengan seal khusus menjaga kerenyahan.</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span> Sistem inventaris JIT (Just-In-Time) meningkatkan efisiensi modal kerja.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Main Dashboard Visualization -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Line Chart: Daily Sales -->
+<div class="lg:col-span-2 p-8 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark flex flex-col gap-6">
+<div class="flex justify-between items-center">
+<div>
+<h3 class="text-lg font-bold">Daily Sales Trend</h3>
+<p class="text-slate-400 text-xs">November 1 - November 22, 2025</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#f9eb24]"></span>
+<span class="text-xs text-slate-400 uppercase font-bold tracking-tighter">Gross Sales</span>
+</div>
+</div>
+</div>
+<div class="flex-1 min-h-[300px] flex items-end justify-between gap-1 pb-4 relative">
+<!-- Placeholder for Chart Graphics -->
+<div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+<span class="material-symbols-outlined scale-[10]">query_stats</span>
+</div>
+<!-- Custom SVG Line mimicking a trend -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none">
+<path class="drop-shadow-[0_0_10px_#f9eb24]" d="M0,250 Q100,200 200,230 T400,100 T600,150 T800,50" fill="none" stroke="#f9eb24" stroke-width="4"></path>
+</svg>
+<!-- X-Axis Labels -->
+<div class="absolute bottom-0 w-full flex justify-between text-[10px] text-slate-500 font-bold px-2">
+<span>NOV 01</span><span>NOV 05</span><span>NOV 10</span><span>NOV 15</span><span>NOV 20</span><span>NOV 22</span>
+</div>
+</div>
+</div>
+<!-- Product Performance -->
+<div class="p-8 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark flex flex-col gap-6">
+<h3 class="text-lg font-bold">Flavor Popularity</h3>
+<div class="space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-medium">
+<span>Coklat</span>
+<span>42%</span>
+</div>
+<div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 42%;"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-medium">
+<span>Strawberry</span>
+<span>28%</span>
+</div>
+<div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary opacity-80" style="width: 28%;"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-medium">
+<span>Tiramisu</span>
+<span>18%</span>
+</div>
+<div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary opacity-60" style="width: 18%;"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-medium">
+<span>Matcha</span>
+<span>12%</span>
+</div>
+<div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary opacity-40" style="width: 12%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-border-dark text-xs text-slate-500 italic">
+                    *Based on total units sold in Nov 2025
+                </div>
+</div>
+</section>
+<!-- Donut Charts Row -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-8 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark flex items-center justify-between">
+<div class="space-y-1">
+<h3 class="text-lg font-bold">Payment Methods</h3>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-primary rounded-sm"></div>
+<span class="text-xs text-slate-400">Cash (64%)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-white rounded-sm"></div>
+<span class="text-xs text-slate-400">Transfer (36%)</span>
+</div>
+</div>
+</div>
+<div class="relative size-24">
+<svg class="size-full" viewbox="0 0 36 36">
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#fff" stroke-dasharray="100 100" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#f9eb24" stroke-dasharray="64 100" stroke-dashoffset="0" stroke-width="4"></circle>
+</svg>
+</div>
+</div>
+<div class="p-8 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark flex items-center justify-between">
+<div class="space-y-1">
+<h3 class="text-lg font-bold">Sales Channels</h3>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-primary rounded-sm"></div>
+<span class="text-xs text-slate-400">Direct (63%)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-white/40 rounded-sm"></div>
+<span class="text-xs text-slate-400">Online (37%)</span>
+</div>
+</div>
+</div>
+<div class="relative size-24">
+<svg class="size-full" viewbox="0 0 36 36">
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#ffffff66" stroke-dasharray="100 100" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#f9eb24" stroke-dasharray="63 100" stroke-dashoffset="0" stroke-width="4"></circle>
+</svg>
+</div>
+</div>
+</section>
+<!-- Insights Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark hover:border-primary/50 transition-all group">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Apa yang Berhasil</h4>
+<p class="text-sm text-slate-400 leading-relaxed">Diversifikasi rasa menjadi kunci utama peningkatan volume penjualan sebesar 15% minggu-ke-minggu.</p>
+</div>
+<div class="p-6 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark hover:border-primary/50 transition-all group">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Tantangan Utama</h4>
+<p class="text-sm text-slate-400 leading-relaxed">Biaya logistik untuk pengiriman online masih memakan margin profit sekitar 5% dari total penjualan.</p>
+</div>
+<div class="p-6 rounded-xl bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark hover:border-primary/50 transition-all group">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-black transition-colors">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h4 class="text-lg font-bold mb-2">Pembelajaran</h4>
+<p class="text-sm text-slate-400 leading-relaxed">Kualitas produk yang konsisten jauh lebih berharga daripada promosi harga murah dalam jangka panjang.</p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="pt-10 border-t border-border-dark flex flex-col md:flex-row justify-between gap-6 pb-20">
+<div class="max-w-xl">
+<p class="text-slate-500 text-sm leading-relaxed">
+                    Ringkasan Performa: Bulan November menunjukkan stabilitas operasional yang signifikan. Dengan margin 40%, BANANA CHIPS siap untuk melakukan ekspansi ke platform e-commerce regional di Q1 2026. Fokus mendatang adalah optimalisasi supply chain.
+                </p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<p class="text-xs font-bold text-primary tracking-widest uppercase">System Generated Report</p>
+<p class="text-slate-600 text-[10px]">Reference: BC-REP-2025-11-22-EX</p>
+</div>
+</footer>
+</main>
+</body></html>
